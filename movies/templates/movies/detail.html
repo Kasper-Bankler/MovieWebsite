@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/">Django Project</a>
+        </div>
+    </nav>
+    <dl>
+        <br><dt>Title</dt>
+        <dd>{{ movie.title }}</dd>
+        <dt>Genre</dt>
+        <dd>{{ movie.genre }}</dd>
+        <dt>Stock</dt>
+        <dd>{{ movie.number_in_stock }}</dd>
+    </dl>
+{% endblock  %}

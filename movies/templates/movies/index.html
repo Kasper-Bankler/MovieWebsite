@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <nav class="navbar bg-light">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="/">Django Project</a>
+    </div>
+    </nav>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Daily Rate</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>
+                    <a href="{% url 'movies:detail' movie.id %}">{{ movie.title }}</a>
+                </td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.number_in_stock }}</td>
+                <td>{{ movie.daily_rate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock  %}
+
+
+
+
+
